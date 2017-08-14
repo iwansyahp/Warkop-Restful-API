@@ -20,7 +20,7 @@ public class Barang {
 	public Long getId() {
 		return id;
 	}
-
+	//ctor
 	public Barang(String nama) {
 		this();
 		this.nama = nama;

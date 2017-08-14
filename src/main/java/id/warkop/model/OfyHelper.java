@@ -3,6 +3,7 @@ package id.warkop.model;
 import com.googlecode.objectify.ObjectifyService;
 
 import id.warkop.model.barang.Barang;
+import id.warkop.model.warung.Warung;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
@@ -17,6 +18,7 @@ public class OfyHelper implements ServletContextListener {
     // This will be invoked as part of a warmup request, or the first user request if no warmup
     // request.
     ObjectifyService.register(Barang.class);
+    ObjectifyService.register(Warung.class);
   }
 
   public void contextDestroyed(ServletContextEvent event) {

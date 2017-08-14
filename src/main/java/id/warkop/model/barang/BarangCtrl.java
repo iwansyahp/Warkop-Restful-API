@@ -7,9 +7,9 @@ import java.util.List;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Result;
 
-
 public class BarangCtrl {
 	
+	// terapkan pagination
 	public List<Barang> daftar(int offset, int limit) {
 		
 		List<Barang> daftarBarang = ofy()

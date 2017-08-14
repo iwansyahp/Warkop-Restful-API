@@ -1,8 +1,6 @@
+id/warkop/model/OfyHelper.class
+id/warkop/api/v1/JSONPesan.class
 id/warkop/model/barang/Barang.class
 id/warkop/servlet/HelloAppEngine.class
 id/warkop/model/barang/BarangCtrl.class
-id/warkop/model/OfyHelper.class
-id/warkop/api/v1/BarangApi.class
-id/warkop/api/v1/JSONBarang.class
-id/warkop/api/v1/JSONPesan.class
 id/warkop/servlet/BarangServlet.class

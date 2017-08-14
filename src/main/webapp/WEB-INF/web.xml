@@ -26,7 +26,10 @@
         <servlet-class>com.google.api.server.spi.EndpointsServlet</servlet-class>
         <init-param>
             <param-name>services</param-name>
-            <param-value>id.warkop.api.v1.BarangApi</param-value>
+            <param-value>
+	            id.warkop.api.v1.barang.BarangApi,
+	            id.warkop.api.v1.warung.WarungApi
+            </param-value>
         </init-param>
     </servlet>
     <!-- Route API method requests to the backend. -->

@@ -24,7 +24,7 @@ public class BarangServlet extends HttpServlet {
 		// Panggil halamanlogin.jsp
 		resp.setContentType("text/html");
 		RequestDispatcher jsp = req
-				.getRequestDispatcher("/WEB-INF/jsp/barang.jsp");
+				.getRequestDispatcher(KonstantaServlet.JSP_FOLDER+"barang.jsp");
 		jsp.forward(req, resp);
 		
 	}
