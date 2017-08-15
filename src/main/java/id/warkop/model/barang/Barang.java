@@ -9,6 +9,7 @@ public class Barang {
 	
 	private String nama;
 	
+	
 	public String getNama() {
 		return nama;
 	}
@@ -17,16 +18,15 @@ public class Barang {
 		this.nama = nama;
 	}
 
-	public Long getId() {
+		public Long getId() {
 		return id;
 	}
 	//ctor
 	public Barang(String nama) {
-		this();
 		this.nama = nama;
 	}
 	
-	private Barang() {
+	protected Barang() {
 	}
 	
 }

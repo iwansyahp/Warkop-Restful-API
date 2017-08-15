@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import id.warkop.model.barang.Barang;
 import id.warkop.model.barang.BarangCtrl;
+import id.warkop.model.barang.minuman.MinumanCtrl;
 
 @SuppressWarnings("serial")
 public class BarangServlet extends HttpServlet {
@@ -19,7 +20,6 @@ public class BarangServlet extends HttpServlet {
 			throws IOException, ServletException {
 
 		List<Barang> daftarBarang = new BarangCtrl().daftar(0, 20);
-		
 		req.setAttribute("daftarBarang", daftarBarang);
 		// Panggil halamanlogin.jsp
 		resp.setContentType("text/html");
@@ -35,7 +35,7 @@ public class BarangServlet extends HttpServlet {
 
 	    String nama = req.getParameter("namaBarang");
 	    try {
-			new BarangCtrl().baru(nama);
+			new MinumanCtrl().baru(nama, false);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

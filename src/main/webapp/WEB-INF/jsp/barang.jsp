@@ -16,5 +16,7 @@
 		<input type="submit" value="Tambah Barang" />
 	</form>
 	
+	<p>Tugas: tampilkan hanya minuman dan/atau makanan saja</p>
+	
 </body>
 </html>
