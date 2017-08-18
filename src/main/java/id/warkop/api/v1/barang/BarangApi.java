@@ -17,9 +17,9 @@ import com.google.api.server.spi.config.Nullable;
 import com.google.api.server.spi.response.NotFoundException;
 
 @Api(name = "barang",
-title = "Layanan Barang",
-version="v1",
-description="API untuk resource barang")
+	title = "Layanan Barang",
+	version="v1",
+	description="API untuk resource barang")
 public class BarangApi {
 	
 	@ApiMethod(name="daftar", 
@@ -54,14 +54,14 @@ public class BarangApi {
 		return response;
 	}
 	
-	@ApiMethod(name="baru", 
-			path="barang", 
+	@ApiMethod(name="baru",
+			path="barang",
 			httpMethod=HttpMethod.POST)
 	public JSONBarang baru(
-			JSONBarang jBarang) throws Exception {
+			@Named("nama") String nama) throws Exception {
 		JSONBarang response = null;
 		
-		Barang barang = new BarangCtrl().baru(jBarang.getNama());
+		Barang barang = new BarangCtrl().baru(nama);
 		
 		response = new JSONBarang(barang);
 		
@@ -83,15 +83,16 @@ public class BarangApi {
 		return response;
 	}
 	
-	@ApiMethod(name="ubah", 
-			path="barang", 
+	@ApiMethod(name="ubahNama", 
+			path="barang/{id}/nama", 
 			httpMethod=HttpMethod.PUT)
-	public JSONBarang ubah(
-			JSONBarang jBarang) throws Exception {
+	public JSONBarang ubahNama(
+			@Named("id") Long id,
+			@Named("namaBaru") String namaBaru) throws Exception {
 		JSONBarang response = null;
 		
-		Long id = (Long) jBarang.getId();
-		Barang barang = new BarangCtrl().ubah(id, jBarang.getNama());
+		Long idB = (Long) Long.valueOf(id);
+		Barang barang = new BarangCtrl().ubah(idB, namaBaru);
 		
 		response = new JSONBarang(barang);
 		

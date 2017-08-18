@@ -20,6 +20,7 @@ public class BarangServlet extends HttpServlet {
 			throws IOException, ServletException {
 
 		List<Barang> daftarBarang = new BarangCtrl().daftar(0, 20);
+		
 		req.setAttribute("daftarBarang", daftarBarang);
 		// Panggil halamanlogin.jsp
 		resp.setContentType("text/html");

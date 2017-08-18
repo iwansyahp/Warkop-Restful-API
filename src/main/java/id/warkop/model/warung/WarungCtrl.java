@@ -22,7 +22,8 @@ public class WarungCtrl {
 		return daftarWarung;
 	}
 		
-	public Warung baru(String nama, String alamat, String noTelp, String namaPemilik) throws Exception {
+	public Warung baru(String nama, String alamat, String noTelp, String namaPemilik) 
+			throws Exception {
 		Warung warung = null;
 		
 		if ( nama == null || nama.equals("")) {
@@ -41,7 +42,7 @@ public class WarungCtrl {
 		Result<Warung> result = ofy().load().key(Key.create(Warung.class, id));
 		warung = result.now();
 		
-		if (namaBaru == null) {
+		if (namaBaru == null || namaBaru.equals("")) {
 			throw new Exception("Nama tidak boleh kosong");
 		} else {
 			// Ubah

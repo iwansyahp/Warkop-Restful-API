@@ -25,7 +25,7 @@ public class Warung {
 		this.nama = nama;
 	}
 	public String getNamaPemilik() {
-		return nama;
+		return namaPemilik;
 	}
 	public void setNamaPemilik(String namaPemilik) {
 		this.namaPemilik = namaPemilik;

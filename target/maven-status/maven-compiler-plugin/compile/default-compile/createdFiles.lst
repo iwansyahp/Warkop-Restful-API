@@ -1,6 +1,16 @@
+id/warkop/Konstanta.class
+id/warkop/model/warung/Warung.class
 id/warkop/model/OfyHelper.class
+id/warkop/servlet/KonstantaServlet.class
+id/warkop/api/v1/warung/WarungApi.class
+id/warkop/model/barang/minuman/Minuman.class
 id/warkop/api/v1/JSONPesan.class
+id/warkop/api/v1/barang/BarangApi.class
 id/warkop/model/barang/Barang.class
 id/warkop/servlet/HelloAppEngine.class
+id/warkop/api/v1/warung/JSONWarung.class
 id/warkop/model/barang/BarangCtrl.class
+id/warkop/model/barang/minuman/MinumanCtrl.class
+id/warkop/model/warung/WarungCtrl.class
 id/warkop/servlet/BarangServlet.class
+id/warkop/api/v1/barang/JSONBarang.class

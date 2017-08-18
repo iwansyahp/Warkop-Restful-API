@@ -1,4 +1,6 @@
+id/warkop/model/barang/UjiMinumanCtrl.class
 id/warkop/servlet/HelloAppEngineTest.class
 id/warkop/model/barang/UjiBarangCtrl.class
+id/warkop/model/barang/UjiWarungCtrl.class
 id/warkop/model/barang/UtilitasUjiBarang.class
 id/warkop/servlet/MockHttpServletResponse.class

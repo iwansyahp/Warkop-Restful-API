@@ -4,6 +4,7 @@ import static com.googlecode.objectify.ObjectifyService.ofy;
 
 import java.util.List;
 
+import com.google.api.server.spi.response.BadRequestException;
 import com.googlecode.objectify.Key;
 import com.googlecode.objectify.Result;
 
@@ -24,7 +25,7 @@ public class BarangCtrl {
 	
 	public Barang baru(String nama) throws Exception {
 		Barang barang = null;
-		if ( nama == null) {
+		if ( nama == null || nama.equals("")) {
 			throw new Exception("Nama tidak boleh kosong");
 		}else {
 	    	barang = new Barang(nama);
@@ -42,8 +43,8 @@ public class BarangCtrl {
 		Result<Barang> result = ofy().load().key(Key.create(Barang.class, id));
 		barang = result.now();
 		
-		if (namaBaru == null) {
-			throw new Exception("Nama tidak boleh kosong");
+		if (namaBaru == null || namaBaru.equals("")) {
+			throw new BadRequestException("Nama tidak boleh kosong");
 		} else {
 			// Ubah
 			barang.setNama(namaBaru);
@@ -68,7 +69,6 @@ public class BarangCtrl {
 		barang = result.now();
 		return barang;
 	}
-	
 
 	public void hapus(Long id) throws Exception {
 		Barang barang = cari(id);
